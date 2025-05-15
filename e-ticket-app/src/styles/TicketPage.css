@@ -1,0 +1,168 @@
+    /* Add these new styles at the beginning */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+}
+
+/* Update ticket page container */
+.ticket-page-container {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #eff6ff 0%, #eef2ff 100%);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent all scrolling initially */
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ticket-card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+  overflow-y: auto; /* Only allow vertical scrolling if needed */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add the loading spinner styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  height: 200px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #4f46e5;
+  animation: spin 1s ease-in-out infinite;
+  margin-top: 1rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Keep the rest of your CSS, but update canvas container */
+.canvas-container {
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-canvas {
+  max-width: 100%;
+  width: auto;
+  max-height: 50vh;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Update media queries to be more strict about sizing */
+@media (max-width: 768px) {
+  .ticket-card {
+    padding: 1.25rem;
+    width: 95%;
+    max-height: 85vh;
+  }
+  
+  .ticket-title {
+    font-size: 1.5rem;
+  }
+  
+  .download-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket-card {
+    padding: 1rem;
+    width: 95%;
+    max-height: 80vh;
+  }
+  
+  .ticket-title {
+    font-size: 1.25rem;
+  }
+  
+  .canvas-container {
+    margin: 0.5rem auto;
+  }
+  
+  .ticket-canvas {
+    max-height: 40vh;
+  }
+  
+  .download-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem 0;
+  height: 200px;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #4f46e5;
+  animation: spin 1s ease-in-out infinite;
+  margin-top: 1rem;
+}
+
+.loading-message {
+  color: #6b7280;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
