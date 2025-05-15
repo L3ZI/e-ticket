@@ -28,7 +28,7 @@ const HomePage = () => {
           <div className="card-header">
             <h2 className="card-title">
               <span className="card-icon">👨‍🎓</span>
-              Student List
+              Graduant List
             </h2>
             <p className="card-subtitle">
               Find your name and click to generate your e-ticket
@@ -56,7 +56,7 @@ const HomePage = () => {
           
           {/* Info box with enhanced styling */}
           <div className="info-box">
-            <p>Can't find your name? Please contact the event organizers.</p>
+            <p>Can't find your name? Please contact the organizing committee.</p>
           </div>
         </div>
         
@@ -64,9 +64,7 @@ const HomePage = () => {
         <footer className="page-footer">
           <p>© {new Date().getFullYear()} Farewell Celebration. All rights reserved.</p>
           <div className="footer-links">
-            <a href="#" className="footer-link">Contact</a>
-            <a href="#" className="footer-link">About</a>
-            <a href="#" className="footer-link">Privacy</a>
+            <a href="#" className="footer-link">Developed and Maintained by StayLanka (PVT) LTD</a>
           </div>
         </footer>
       </div>
