@@ -63,9 +63,7 @@ const HomePage = () => {
         {/* Enhanced footer */}
         <footer className="page-footer">
           <p>© {new Date().getFullYear()} Farewell Celebration. All rights reserved.</p>
-          <div className="footer-links">
-            <a href="#" className="footer-link">Developed and Maintained by Staylanka (PVT) LTD</a>
-          </div>
+        
         </footer>
       </div>
     </div>
