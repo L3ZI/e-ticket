@@ -44,7 +44,7 @@ const TicketPage = () => {
           // Font styling
           ctx.font = 'bold 60px Poppins';
           ctx.fillStyle = '#1D1C45';
-          ctx.fillText(name, 130, 550); // adjust position as needed
+          ctx.fillText(name, 150, 550); // adjust position as needed
         }
       };
       
