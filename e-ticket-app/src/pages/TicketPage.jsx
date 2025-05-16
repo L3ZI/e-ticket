@@ -146,10 +146,7 @@ const TicketPage = () => {
         {/* Footer - same as Homepage */}
         <footer className="page-footer">
           <p>© {new Date().getFullYear()} Farewell Celebration. All rights reserved.</p>
-          <div className="footer-links">
-            <a href="#" className="footer-link">Developed and Maintained by StayLanka (PVT) LTD</a>
-          </div>
-        </footer>
+         </footer>
       </div>
     </div>
   );
