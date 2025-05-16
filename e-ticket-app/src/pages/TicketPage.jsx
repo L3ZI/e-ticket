@@ -44,7 +44,11 @@ const TicketPage = () => {
           // Font styling
           ctx.font = 'bold 150px Poppins';
           ctx.fillStyle = '#1D1C45';
+<<<<<<< HEAD
           ctx.fillText(name, 500, 1550); // adjust position as needed
+=======
+          ctx.fillText(name, 150, 530); // adjust position as needed
+>>>>>>> b33ac25d39eeecc0450cb4353bdc4bdb9e11b3db
         }
       };
       
@@ -64,10 +68,17 @@ const TicketPage = () => {
     
     // Try multiple paths to find the image
     tryLoadImage([
+<<<<<<< HEAD
       '/ticket.jpg',
       './ticket.jpg',
       '/assets/ticket.jpg',
       '/images/ticket.jpg'
+=======
+      '/ticket.png',
+      './ticket.png',
+      '/assets/ticket.png',
+      '/images/ticket.png'
+>>>>>>> b33ac25d39eeecc0450cb4353bdc4bdb9e11b3db
     ]);
     
     // Cleanup
@@ -98,7 +109,11 @@ const TicketPage = () => {
           </h1>
           <div className="title-underline"></div>
           <p className="header-description">
+<<<<<<< HEAD
             With heartfelt gratitude ❤️, we thank you for guiding us — Celebrating the Next Chapter in Medical Excellence🩺.
+=======
+            With heartfelt gratitude ❤️, we thank you for guiding us farewell and best wishes always ✨.
+>>>>>>> b33ac25d39eeecc0450cb4353bdc4bdb9e11b3db
           </p>
         </header>
         
@@ -107,7 +122,11 @@ const TicketPage = () => {
           <div className="card-header">
             <h2 className="card-title">
               <span className="card-icon">🎫</span>
+<<<<<<< HEAD
               Your Personalized e-Ticket
+=======
+              Your Personalized Ticket
+>>>>>>> b33ac25d39eeecc0450cb4353bdc4bdb9e11b3db
             </h2>
             <p className="card-subtitle">
               Hello, <span className="highlight-text">{name}</span>! Here's your farewell e-ticket.
@@ -147,7 +166,11 @@ const TicketPage = () => {
         <footer className="page-footer">
           <p>© {new Date().getFullYear()} Farewell Celebration. All rights reserved.</p>
           <div className="footer-links">
+<<<<<<< HEAD
             <a href="#" className="footer-link">Developed and Maintained by Staylanka (PVT) LTD</a>
+=======
+            <a href="#" className="footer-link">Developed and Maintained by StayLanka (PVT) LTD</a>
+>>>>>>> b33ac25d39eeecc0450cb4353bdc4bdb9e11b3db
           </div>
         </footer>
       </div>

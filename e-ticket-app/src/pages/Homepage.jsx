@@ -19,7 +19,7 @@ const HomePage = () => {
           </h1>
           <div className="title-underline"></div>
           <p className="header-description">
-            With heartfelt gratitude ❤️, we thank you for guiding us — Celebrating the Next Chapter in Medical Excellence🩺.
+            Welcome to our digital farewell celebration. Find your name and download your personalized e-ticket.
           </p>
         </header>
         
