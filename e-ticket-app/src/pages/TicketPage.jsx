@@ -42,9 +42,9 @@ const TicketPage = () => {
           ctx.drawImage(img, 0, 0);
           
           // Font styling
-          ctx.font = 'bold 60px Poppins';
+          ctx.font = 'bold 150px Poppins';
           ctx.fillStyle = '#1D1C45';
-          ctx.fillText(name, 150, 530); // adjust position as needed
+          ctx.fillText(name, 500, 1550); // adjust position as needed
         }
       };
       
@@ -64,10 +64,10 @@ const TicketPage = () => {
     
     // Try multiple paths to find the image
     tryLoadImage([
-      '/ticket.png',
-      './ticket.png',
-      '/assets/ticket.png',
-      '/images/ticket.png'
+      '/ticket.jpg',
+      './ticket.jpg',
+      '/assets/ticket.jpg',
+      '/images/ticket.jpg'
     ]);
     
     // Cleanup
@@ -98,7 +98,7 @@ const TicketPage = () => {
           </h1>
           <div className="title-underline"></div>
           <p className="header-description">
-            With heartfelt gratitude ❤️, we thank you for guiding us farewell and best wishes always ✨.
+            With heartfelt gratitude ❤️, we thank you for guiding us — Celebrating the Next Chapter in Medical Excellence🩺.
           </p>
         </header>
         
@@ -107,7 +107,7 @@ const TicketPage = () => {
           <div className="card-header">
             <h2 className="card-title">
               <span className="card-icon">🎫</span>
-              Your Personalized Ticket
+              Your Personalized e-Ticket
             </h2>
             <p className="card-subtitle">
               Hello, <span className="highlight-text">{name}</span>! Here's your farewell e-ticket.
@@ -147,7 +147,7 @@ const TicketPage = () => {
         <footer className="page-footer">
           <p>© {new Date().getFullYear()} Farewell Celebration. All rights reserved.</p>
           <div className="footer-links">
-            <a href="#" className="footer-link">Developed and Maintained by StayLanka (PVT) LTD</a>
+            <a href="#" className="footer-link">Developed and Maintained by Staylanka (PVT) LTD</a>
           </div>
         </footer>
       </div>

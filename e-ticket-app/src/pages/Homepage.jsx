@@ -1,6 +1,6 @@
 import { useState } from "react";
 import StudentList from "../components/StudentList";
-import "../styles/Homepage.css"; // Import the CSS file
+import "../styles/Homepage.css"; 
 
 const HomePage = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -19,7 +19,7 @@ const HomePage = () => {
           </h1>
           <div className="title-underline"></div>
           <p className="header-description">
-            With heartfelt gratitude ❤️, we thank you for guiding us farewell and best wishes always ✨.
+            With heartfelt gratitude ❤️, we thank you for guiding us — Celebrating the Next Chapter in Medical Excellence🩺.
           </p>
         </header>
         
@@ -31,7 +31,7 @@ const HomePage = () => {
               Boarding Pass List
             </h2>
             <p className="card-subtitle">
-              Find your name and click to generate your e-ticket
+              Find your name and click to generate your e-ticket 🎟️.
             </p>
           </div>
           
@@ -64,7 +64,7 @@ const HomePage = () => {
         <footer className="page-footer">
           <p>© {new Date().getFullYear()} Farewell Celebration. All rights reserved.</p>
           <div className="footer-links">
-            <a href="#" className="footer-link">Developed and Maintained by StayLanka (PVT) LTD</a>
+            <a href="#" className="footer-link">Developed and Maintained by Staylanka (PVT) LTD</a>
           </div>
         </footer>
       </div>

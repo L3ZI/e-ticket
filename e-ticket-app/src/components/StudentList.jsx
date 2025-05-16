@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/StudentList.css';
 const StudentList = ({ searchQuery = "" }) => {
-  // Sample student list - replace with your actual data/API
   const allStudents = [
     "Mr.K.Kirushanth","Mr.V.S.M.Sarma","Mr.S.Isaijarashan", "Ms.R.H.Mithumala","Ms.G.Geerthiga","SMs.P.Sanchana",
     "Ms.M.P.N.Salgado","Ms.T.I.Vijayakumar","Mr.K.Kajaniethan","Mr.B.Bakeerathan","Ms.S.Gnanachelvam","Ms.V.Mohanarasa",
@@ -11,7 +10,6 @@ const StudentList = ({ searchQuery = "" }) => {
     "Mr.W.J.H.Prabath","Ms.H.M.S.Herath","Mr.H.P.Madhusanka","Ms.N.W.K.D.D.Chandrasekara","Mr.U.L.D.R.H.Gunasinghe","Ms.H.D.K.K.Kumari","Mr.D.M.R.S.Dissanayake","Ms.K.M.R.W.P.K.Kulasekara",
     "Ms.S.F.Ifasha ","Mr.K.M.I.D.Karunarathna","Mr.R.N.Suranga","Ms.A.R.F.Milara","Mr.S.A.Khan","Ms.V.Sahana","Ms.D.B.I.W.A.I.K.Dasanayake","Ms.P.J.I.Wijetunge",
     "Ms.B.G.I.Maduwanthi","Ms.R.M.K.M.Ranathunga","Ms.F.Atheefa"
-    // Add more students as needed
   ];
   
   // Filter students based on search query
