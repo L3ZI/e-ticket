@@ -94,11 +94,11 @@ const TicketPage = () => {
         {/* Header with same styling as Homepage */}
         <header className="page-header">
           <h1 className="page-title">
-            Fly High 17's
+            Fly High 17s'
           </h1>
           <div className="title-underline"></div>
           <p className="header-description">
-            With heartfelt gratitude ❤️, we thank you for guiding us farewell and best wishes always ✨.
+            Welcome to our digital farewell celebration.  With heartfelt gratitude ❤️, we thank you for guiding us — Celebrating the Next Chapter in Medical Excellence🩺.
           </p>
         </header>
         
