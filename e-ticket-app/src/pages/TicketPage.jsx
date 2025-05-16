@@ -42,9 +42,9 @@ const TicketPage = () => {
           ctx.drawImage(img, 0, 0);
           
           // Font styling
-          ctx.font = 'bold 150px Poppins';
+          ctx.font = 'bold 60px Poppins';
           ctx.fillStyle = '#1D1C45';
-          ctx.fillText(name, 500, 1550); // adjust position as needed
+          ctx.fillText(name, 150, 530); // adjust position as needed
         }
       };
       
