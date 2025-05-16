@@ -64,10 +64,10 @@ const TicketPage = () => {
     
     // Try multiple paths to find the image
     tryLoadImage([
-      '/ticket.jpg',
-      './ticket.jpg',
-      '/assets/ticket.jpg',
-      '/images/ticket.jpg'
+      '/ticket.png',
+      './ticket.png',
+      '/assets/ticket.png',
+      '/images/ticket.png'
     ]);
     
     // Cleanup
@@ -83,7 +83,7 @@ const TicketPage = () => {
     if (!canvasRef.current || !imgLoaded) return;
     
     const link = document.createElement('a');
-    link.download = `${name}_ticket.jpg`;
+    link.download = `${name}_ticket.png`;
     link.href = canvasRef.current.toDataURL();
     link.click();
   };
