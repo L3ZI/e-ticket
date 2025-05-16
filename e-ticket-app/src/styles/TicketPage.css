@@ -33,6 +33,7 @@
   justify-content: center;
   margin: 2rem 0;
   height: 200px;
+  width: 100%;
 }
 
 .loading-spinner {
@@ -61,6 +62,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 /* Back link */
@@ -175,28 +177,33 @@
     right: 0;
     bottom: 0;
     overflow: hidden;
+    width: 100% !important;
   }
   
   .content-wrapper {
     padding: 0.75rem 0.5rem;
     padding-bottom: 70px; /* Match Homepage padding */
+    width: 100% !important;
   }
   
   /* Reduce margins and spacing to match Homepage */
   .card-header {
     margin-bottom: 0.75rem;
     padding-bottom: 0.5rem;
+    width: 100% !important;
   }
   
   .card-subtitle {
     margin-top: 0.15rem;
     font-size: 0.85rem;
+    width: 100% !important;
   }
   
   .canvas-container {
     margin: 0.5rem auto;
     max-height: 35vh;
     max-width: 85%;
+    width: 85%;
   }
   
   .ticket-canvas {
@@ -207,6 +214,7 @@
   .main-card {
     max-height: calc(100vh - 200px);
     padding: 0.75rem;
+    width: 100% !important;
   }
   
   /* Match the footer styling */
@@ -215,6 +223,7 @@
     position: relative;
     bottom: auto;
     padding-bottom: 1%;
+    width: 100% !important;
   }
   
   /* Reduce button size for better fit */
@@ -223,10 +232,197 @@
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
     margin-top: 1rem;
+    width: auto !important;
+    max-width: 80%;
   }
   
   /* Reduce back link container spacing */
   .back-link-container {
     margin-top: 1rem;
+    width: 100% !important;
+  }
+}
+
+/* Safari/iOS specific fixes */
+@media screen and (max-width: 480px) {
+  body, html {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+    height: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    touch-action: pan-y;
+    -webkit-text-size-adjust: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden; 
+  }
+  
+  .homepage-container {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+    min-height: 100vh;
+    height: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .content-wrapper {
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+    padding-bottom: max(70px, env(safe-area-inset-bottom) + 20px);
+    padding-left: max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
+    -webkit-overflow-scrolling: touch;
+    height: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+  
+  .main-card {
+    max-height: none;
+    height: auto;
+    overflow-y: visible;
+    overflow-x: hidden !important;
+    padding: 0.75rem;
+    width: 100% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure canvas container is properly sized and positioned */
+  .canvas-container {
+    margin: 0.5rem auto;
+    max-height: 33vh;
+    max-width: 100% !important;
+    width: 90% !important;
+    box-sizing: border-box;
+    overflow: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    transform: translateZ(0);
+    transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .ticket-canvas {
+    max-height: 28vh;
+    width: auto;
+    height: auto;
+    max-width: 100% !important;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  /* Fix for text drawing on canvas in Safari */
+  canvas {
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .page-footer {
+    position: relative;
+    width: 100% !important;
+    padding-bottom: max(1%, env(safe-area-inset-bottom));
+    margin-top: 1rem;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+  
+  /* Improve button appearance on Safari */
+  .primary-button,
+  .download-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1.5rem !important;
+    max-width: 200px;
+    width: auto;
+  }
+  
+  /* Fix back link display */
+  .back-link-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+  
+  /* Fix loading container */
+  .loading-container {
+    width: 100% !important;
+    box-sizing: border-box;
+    height: 150px;
+    margin: 1rem 0;
+  }
+  
+  /* Ensure no horizontal overflow */
+  * {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* Safari-specific Canvas handling */
+@supports (-webkit-touch-callout: none) {
+  .canvas-container {
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  }
+  
+  .ticket-canvas {
+    image-rendering: -webkit-optimize-contrast;
+    -webkit-transform: translateZ(0);
+  }
+  
+  /* iOS fix for seeing complete canvas */
+  @media screen and (max-width: 480px) {
+    .canvas-container {
+      transform: scale(0.95);
+      -webkit-transform: scale(0.95);
+      margin: 0.25rem auto;
+    }
+    
+    .ticket-canvas {
+      max-height: 26vh;
+    }
   }
 }

@@ -1,6 +1,8 @@
 /* Reset and base settings */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 /* Make sure the body and html elements don't add extra space */
@@ -11,13 +13,14 @@ html, body {
   width: 100%;
   overflow: hidden;
   position: fixed;
+  overscroll-behavior: none; /* Prevent bounce effects */
 }
 
 /* Homepage specific styling */
 .homepage-container {
   min-height: 100vh;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(135deg, #e0f2fe 0%, #e0e7ff 100%);
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
@@ -49,6 +52,7 @@ html, body {
   text-align: center;
   margin-bottom: 2rem;
   animation: fadeIn 1s ease-in-out;
+  width: 100%;
 }
 
 .page-title {
@@ -80,12 +84,14 @@ html, body {
 .search-container {
   margin-bottom: 1.5rem;
   padding: 0 0.5rem;
+  width: 100%;
 }
 
 .search-input-wrapper {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .search-input {
@@ -131,6 +137,7 @@ html, body {
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .main-card:hover {
@@ -143,6 +150,7 @@ html, body {
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #e5e7eb;
+  width: 100%;
 }
 
 .card-title {
@@ -152,6 +160,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .card-icon {
@@ -163,6 +172,7 @@ html, body {
   color: #6b7280;
   margin-top: 0.25rem;
   text-align: center;
+  width: 100%;
 }
 
 /* Student list container */
@@ -173,7 +183,9 @@ html, body {
   box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
   flex: 1;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  width: 100%;
 }
 
 /* Info box */
@@ -186,6 +198,7 @@ html, body {
   padding: 1rem;
   border-radius: 0.5rem;
   border: 1px solid #dbeafe;
+  width: 100%;
 }
 
 /* Footer */
@@ -194,6 +207,7 @@ html, body {
   text-align: center;
   color: #6b7280;
   font-size: 0.875rem;
+  width: 100%;
 }
 
 .footer-links {
@@ -201,12 +215,16 @@ html, body {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .footer-link {
   color: #4f46e5;
   text-decoration: none;
   transition: color 0.2s ease;
+  white-space: normal;
+  overflow-wrap: break-word;
 }
 
 .footer-link:hover {
@@ -260,6 +278,8 @@ html, body {
   /* Keep existing styles */
   body, html {
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
   }
   
   .homepage-container {
@@ -269,32 +289,40 @@ html, body {
     right: 0;
     bottom: 0;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;
   }
   
   .content-wrapper {
     padding: 0.75rem 0.5rem;
     padding-bottom: 70px;
+    width: 100%;
+    max-width: 100%;
   }
   
   /* REDUCE MARGINS & PADDING FOR SEARCH AND CARD ELEMENTS */
   .search-container {
     margin-bottom: 0.75rem; /* Reduced from 1.5rem */
+    width: 100%;
   }
   
   .card-header {
     margin-bottom: 0.75rem; /* Reduced from 1.5rem */
     padding-bottom: 0.5rem; /* Reduced from 1rem */
+    width: 100%;
   }
   
   .card-subtitle {
     margin-top: 0.15rem; /* Reduced from 0.25rem */
     font-size: 0.85rem; /* Slightly smaller font */
+    width: 100%;
   }
   
   /* Adjust spacing within the main card */
   .main-card {
     max-height: calc(100vh - 200px);
     padding: 0.75rem; /* Reduced padding */
+    width: 100%;
   }
   
   /* Keep the page footer in the flow with appropriate spacing */
@@ -303,5 +331,141 @@ html, body {
     position: relative;
     bottom: auto;
     padding-bottom: 1%;
+    width: 100%;
+  }
+}
+
+/* Safari on iPhone - UPDATED AND FIXED */
+@media screen and (max-width: 480px) {
+  body, html {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+    height: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    touch-action: pan-y;
+    -webkit-text-size-adjust: 100%;
+  }
+  
+  .homepage-container {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden !important;
+    min-height: 100vh;
+    height: auto;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .content-wrapper {
+    padding-top: max(0.75rem, env(safe-area-inset-top));
+    padding-bottom: max(70px, env(safe-area-inset-bottom) + 20px);
+    padding-left: max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
+    -webkit-overflow-scrolling: touch;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    margin: 0 !important;
+  }
+  
+  .main-card {
+    max-height: none;
+    height: auto;
+    overflow-y: visible;
+    overflow-x: hidden;
+    box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.08);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    width: 100% !important;
+    padding: 0.75rem;
+    margin: 0 !important;
+    box-sizing: border-box;
+  }
+  
+  /* Fix student list height for better scrolling */
+  .student-list-container {
+    max-height: 50vh; /* Reduce height to fit on screen better */
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100% !important;
+    padding: 0.75rem 0.5rem; /* Slightly reduced padding */
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  /* Student list itself */
+  .student-list {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Fix for any inner elements that might cause horizontal scrolling */
+  .card-header, .info-box, .search-container, .student-list {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .search-input {
+    font-size: 16px;
+    border-radius: 0.5rem !important;
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+  
+  .page-footer {
+    position: relative;
+    width: 100% !important;
+    padding-bottom: max(1%, env(safe-area-inset-bottom));
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box;
+  }
+  
+  .footer-links {
+    width: 100% !important;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Fix for the footer link that might be causing horizontal scrolling */
+  .footer-link {
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0.25rem 0;
+    padding: 0 0.5rem;
+    white-space: normal !important; /* Allow text wrapping */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure no horizontal overflow */
+  * {
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
