@@ -1,4 +1,4 @@
-import { useState } from "react";
+  import { useState } from "react";
 import StudentList from "../components/StudentList";
 import "../styles/Homepage.css"; 
 
@@ -15,11 +15,11 @@ const HomePage = () => {
         {/* Header with improved styling */}
         <header className="page-header">
           <h1 className="page-title">
-            Fly High 17's
+            Fly High 17s'
           </h1>
           <div className="title-underline"></div>
           <p className="header-description">
-            Welcome to our digital farewell celebration. Find your name and download your personalized e-ticket.
+            Welcome to our digital farewell celebration.  With heartfelt gratitude ❤️, we thank you for guiding us — Celebrating the Next Chapter in Medical Excellence🩺.
           </p>
         </header>
         
