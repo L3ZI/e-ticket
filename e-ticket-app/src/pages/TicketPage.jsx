@@ -10,7 +10,7 @@ const TicketPage = () => {
   const imgRef = useRef(null);
   
   useEffect(() => {
-    // Create a fresh image instance inside useEffect
+    // Your existing image loading code...
     const img = new Image();
     imgRef.current = img;
     
@@ -44,11 +44,11 @@ const TicketPage = () => {
           // Font styling
           ctx.font = 'bold 60px Poppins';
           ctx.fillStyle = '#1D1C45';
-          ctx.fillText(name, 150, 570); // adjust position as needed
+          ctx.fillText(name, 150, 530); // adjust position as needed
         }
       };
       
-      // Set up error handler to try next path
+      // Set up error handler
       img.onerror = () => {
         console.error(`Failed to load from: ${currentPath}`);
         if (remainingPaths.length > 0) {
@@ -67,8 +67,7 @@ const TicketPage = () => {
       '/ticket.png',
       './ticket.png',
       '/assets/ticket.png',
-      '/usr/share/nginx/html/ticket.png',
-      '/share/nginx/html/ticket.png'
+      '/images/ticket.png'
     ]);
     
     // Cleanup
@@ -90,40 +89,67 @@ const TicketPage = () => {
   };
 
   return (
-    <div className="ticket-page-container">
-      <div className="ticket-card">
-        <div className="ticket-header">
-          <h2 className="ticket-title">Your Personalized Ticket</h2>
-          <p>Hello, <span className="ticket-name">{name}</span>! Here's your farewell e-ticket.</p>
-        </div>
-
-        {isLoading && (
-          <div className="loading-container">
-            <p className="loading-message">Preparing your ticket...</p>
-            <div className="loading-spinner"></div>
+    <div className="homepage-container"> {/* Use the same container class as Homepage */}
+      <div className="content-wrapper">
+        {/* Header with same styling as Homepage */}
+        <header className="page-header">
+          <h1 className="page-title">
+            Fly High 17's
+          </h1>
+          <div className="title-underline"></div>
+          <p className="header-description">
+            With heartfelt gratitude ❤️, we thank you for guiding us farewell and best wishes always ✨.
+          </p>
+        </header>
+        
+        {/* Main card with same styling as Homepage's main-card */}
+        <div className="main-card">
+          <div className="card-header">
+            <h2 className="card-title">
+              <span className="card-icon">🎫</span>
+              Your Personalized Ticket
+            </h2>
+            <p className="card-subtitle">
+              Hello, <span className="highlight-text">{name}</span>! Here's your farewell e-ticket.
+            </p>
           </div>
-        )}
 
-        <div className="canvas-container" style={{ display: isLoading ? 'none' : 'block' }}>
-          <canvas ref={canvasRef} className="ticket-canvas" />
-        </div>
+          {isLoading && (
+            <div className="loading-container">
+              <p className="loading-message">Preparing your ticket...</p>
+              <div className="loading-spinner"></div>
+            </div>
+          )}
 
-        <button 
-          className="download-button" 
-          onClick={downloadTicket}
-          disabled={!imgLoaded || isLoading}
-        >
-          Download Ticket
-        </button>
+          <div className="canvas-container" style={{ display: isLoading ? 'none' : 'block' }}>
+            <canvas ref={canvasRef} className="ticket-canvas" />
+          </div>
 
-        <div style={{marginTop: '1.5rem'}}>
-          <Link to="/" className="back-link">
+          <button 
+            className="primary-button" /* Use the same button class as Homepage */
+            onClick={downloadTicket}
+            disabled={!imgLoaded || isLoading}
+          >
+            Download Ticket
+          </button>
+
+          <div className="back-link-container">
+            <Link to="/" className="back-link">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                 <path fillRule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
               </svg>
-            Back to student list
-          </Link>
+              Back to student list
+            </Link>
+          </div>
         </div>
+
+        {/* Footer - same as Homepage */}
+        <footer className="page-footer">
+          <p>© {new Date().getFullYear()} Farewell Celebration. All rights reserved.</p>
+          <div className="footer-links">
+            <a href="#" className="footer-link">Developed and Maintained by StayLanka (PVT) LTD</a>
+          </div>
+        </footer>
       </div>
     </div>
   );

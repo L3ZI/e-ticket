@@ -15,11 +15,11 @@ const HomePage = () => {
         {/* Header with improved styling */}
         <header className="page-header">
           <h1 className="page-title">
-            Farewell E-Tickets
+            Fly High 17's
           </h1>
           <div className="title-underline"></div>
           <p className="header-description">
-            Welcome to our digital farewell celebration. Find your name and download your personalized e-ticket.
+            With heartfelt gratitude ❤️, we thank you for guiding us farewell and best wishes always ✨.
           </p>
         </header>
         
@@ -27,8 +27,8 @@ const HomePage = () => {
         <div className="main-card">
           <div className="card-header">
             <h2 className="card-title">
-              <span className="card-icon">👨‍🎓</span>
-              Graduant List
+              <span className="card-icon">✈️</span>
+              Boarding Pass List
             </h2>
             <p className="card-subtitle">
               Find your name and click to generate your e-ticket
